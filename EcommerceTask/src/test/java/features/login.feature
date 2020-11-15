@@ -6,7 +6,3 @@ When 	User enters email address
 And 	User enters Password
 And 	User enters signin buton 
 Then 	User should be loggedin
-
-
-
-

@@ -11,7 +11,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="FeatureFile", 
+@CucumberOptions(features="src/test/java/features", 
 				monochrome=true, 
 				dryRun=false, 
 				glue="com.web.automation.stepdefination",
