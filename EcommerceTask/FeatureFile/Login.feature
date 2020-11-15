@@ -8,8 +8,3 @@ And 	User enters signin buton
 Then 	User should be loggedin
 
 
-Scenario: Non Registered user comes to application, Register and login
-Given 	User is on registration page
-When 	User enters email address 
-And 	User click on create account button
-Then 	User account should be created
