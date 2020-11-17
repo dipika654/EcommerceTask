@@ -12,16 +12,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import com.web.automation.base.DriverInstance;
+
 @RunWith(Cucumber.class)
 public class search {
+	Actions action;
+	public search(WebDriver driver) {
+		action = new Actions(driver);
+	}
 
     @When("^	User enters text for search in the search text box$")
     public void user_enters_text_for_search_in_the_search_text_box() throws Throwable {
-    	Actions action;
-    	public search(WebDriver driver) {
-    		action = new Actions(driver);
-    	}
-    	WebDriver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")).click();
+    	
+    	DriverInstance.driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")).click();
     }
 
     @Then("^	User should be see search page $")

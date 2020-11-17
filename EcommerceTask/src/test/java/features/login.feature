@@ -1,4 +1,4 @@
-Feature: Register and non resigter userwill come on application and perform activities
+Feature: Login to the application
 
 Scenario: Registered user come to application, login
 Given 	User is on login page

@@ -58,7 +58,35 @@ public class StepDefination
 	@Then("^User should be loggedin$")
 	public void user_should_be_loggedin() throws Throwable {
 	    System.out.println("User successfully logged in");
+	    driver.quit();
 	}
+	
+	 @Given("^  User is logged in$")
+	    public void user_is_logged_in() throws Throwable {
+		 String Actual = driver.getTitle();
+	        String Expected = "My Store";
+
+	        if (Actual.equals(Expected)) {
+	                   System.out.println("Test Passed!");
+	        } else {
+	                   System.out.println("Test Failed");
+	        }
+	    }
+
+	    @When("^	User enters text in the search text box$")
+	    public void user_enters_text_in_the_search_text_box() throws Throwable {
+	       driver.findElement(By.id("search_query_top")).sendKeys("Printed");}
+
+	    @Then("^	User should be on search page $")
+	    public void user_should_be_on_search_page() throws Throwable {
+	        throw new PendingException();
+	    }
+
+	    @And("^	User click search button $")
+	    public void user_click_search_button() throws Throwable {
+	       
+	    	driver.findElement(By.name("submit_search")).click();
+	    	}
 	@When("^User enters text for search in the search text box$")
 	public void user_enters_text_for_search_in_the_search_text_box() throws Throwable {
 		class searchFunctionality {
