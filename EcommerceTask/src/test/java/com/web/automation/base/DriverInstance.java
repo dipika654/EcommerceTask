@@ -4,8 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DriverInstance {
-	
-	public static WebDriver OpenBrowser(WebDriver driver,String browserName,String url) throws InterruptedException
+	public static WebDriver driver;
+	public static WebDriver OpenBrowser(String browserName,String url) throws InterruptedException
 	{
 		if(browserName.equals("Chrome"))
 		{

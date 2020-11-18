@@ -1,10 +1,11 @@
 package com.web.automation.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+
+//import com.web.automation.base.DriverInstance;
+
 
 public class LoginPage {
 	public WebDriver driver;
@@ -12,19 +13,18 @@ public class LoginPage {
 	public LoginPage(WebDriver driver)
 	{
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
 	}
-	@FindBy(id = "email")
-	@CacheLookup 
-	WebElement txtUsername;
 	
-	@FindBy(id = "passwd")
-	@CacheLookup 
-	WebElement txtPassword;
 	
-	@FindBy(id = "SubmitLogin")
-	@CacheLookup 
-	WebElement btnSubmit;
+	public WebElement txtUsername(){
+        return driver.findElement(By.id("email"));}
+	
+	
+	public WebElement txtPassword(){
+        return driver.findElement(By.id("passwd"));}
+	
+	public WebElement btnSubmit(){
+        return driver.findElement(By.id("SubmitLogin"));}
 	
 	
 			

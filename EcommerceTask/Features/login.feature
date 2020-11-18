@@ -6,10 +6,7 @@ When 	User enters email address
 And 	User enters Password
 And 	User enters signin buton 
 Then 	User should be loggedin
-
-
-Scenario: logged in user come to application, search for products
-Given   User is logged in
+And  	User is logged in
 When 	User enters text in the search text box
 And 	User click search button 
 Then 	User should be on search page
