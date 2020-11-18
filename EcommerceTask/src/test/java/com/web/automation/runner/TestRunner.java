@@ -3,16 +3,14 @@ package com.web.automation.runner;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
-
 import com.vimalselvam.cucumber.listener.ExtentProperties;
 import com.vimalselvam.cucumber.listener.Reporter;
-
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/java/features", 
+@CucumberOptions(features="Features", 
 				monochrome=true, 
 				dryRun=false, 
 				glue="com.web.automation.stepdefination",

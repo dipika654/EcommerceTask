@@ -1,40 +1,22 @@
 package com.web.automation.utility;
 
-import java.io.File;
-import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
-	
-	public static String readProjectConfiguration(String KeyName) {
-		String value = null;
+	public Properties getProperty() throws IOException
+	{
+		FileInputStream inputStream = null;
+		Properties properties =  new Properties();
 		try
 		{
-				FileReader file = new FileReader(new File("ConfigFiles/ProjectConfiguration.properties"));
-				Properties readproperty = new Properties();
-				readproperty.load(file);
-				return readproperty.getProperty(KeyName).trim();
+			properties.load(new FileInputStream("ConfigFiles/ProjectConfiguration.properties"));
+		} catch(Exception e)
+		{
+			System.out.println("Exception: "+ e);
 		}
-	catch(Exception exception) {
-		exception.printStackTrace();
-		throw (new RuntimeException("***ERROR*** : - Key with name "+  KeyName + "does not exists"));
+		return properties;
 	}
-
 }
 	
-	public static String readElementLocators(String KeyName) {
-		String value=null;
-		try
-		{
-				FileReader file = new FileReader(new File("ElementLocators/Locators.properties"));
-				Properties readproperty = new Properties();
-				readproperty.load(file);
-				return readproperty.getProperty(KeyName).trim();
-		}
-	catch(Exception exception) {
-		exception.printStackTrace();
-		throw (new RuntimeException("***ERROR*** : - Locator with name "+  KeyName + "does not exists"));
-	}
-
-}
-}
