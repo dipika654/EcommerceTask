@@ -14,7 +14,8 @@ public class LoginPage {
 	{
 		this.driver = driver;
 	}
-	
+	public WebElement btnSignIn(){
+        return driver.findElement(By.xpath("//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a"));}
 	
 	public WebElement txtUsername(){
         return driver.findElement(By.id("email"));}
@@ -25,14 +26,4 @@ public class LoginPage {
 	
 	public WebElement btnSubmit(){
         return driver.findElement(By.id("SubmitLogin"));}
-	
-	
-			
-
-
-
-
-
-
-
 }

@@ -21,4 +21,8 @@ public class AddToCartPage {
         return driver.findElement(By.xpath("//*[@id=\"center_column\"]/ul/li[2]/div/div[2]/div[2]/a[1]/span"));
         }
 	
+	public WebElement popup(){
+        return driver.findElement(By.xpath("//*[@id=\"layer_cart\"]/div[1]/div[1]/h2"));
+        }
+	
 }
